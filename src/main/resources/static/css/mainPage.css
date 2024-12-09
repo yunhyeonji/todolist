@@ -1,0 +1,111 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #4caf50; /* 녹색 포인트 */
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 메인 컨테이너 */
+.todo-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 30px;
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input input {
+    padding: 10px;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    outline: none;
+}
+
+.todo-input button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.todo-input button:hover {
+    background-color: #45a049;
+}
+
+/* 투두 리스트 */
+.todo-list {
+    list-style: none;
+}
+
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-list li:last-child {
+    border-bottom: none;
+}
+
+.todo-list li span {
+    font-size: 16px;
+}
+
+.todo-list li.completed span {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todo-list li button {
+    background-color: transparent;
+    border: none;
+    color: #f44336; /* 빨간색 삭제 버튼 */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.todo-list li button:hover {
+    color: #d32f2f;
+}
+
+/* 푸터 */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
