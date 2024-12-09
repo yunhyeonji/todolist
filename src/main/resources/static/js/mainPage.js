@@ -38,6 +38,15 @@ $(document).ready(function () {
         // Handle checkbox toggle
         $(".task-checkbox").off("change").on("change", function () {
             $(this).parent().toggleClass("completed");
+
+            if($(this).parent().hasClass("completed")){
+                const totalCheckboxes = $(".task-checkbox").length;
+                const checkedCheckboxes = $(".task-checkbox:checked").length;
+
+                if (totalCheckboxes === checkedCheckboxes) {
+                    alert("모든 작업이 완료되었습니다!");
+                }
+            }
         });
 
         // Handle delete button click
